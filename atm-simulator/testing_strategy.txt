@@ -1,0 +1,18 @@
+Unit Testing
+    - Unit testing should cover all the classes that perform an action, that would include "Account", "AccountService", "CliPrompt", "ConsolePrinter", "TransactionScreen", "WelcomeScreen" and "WithdrawScreen".
+
+Integration Testing
+    - Integration testing should cover the interactions with external components. Since we do not have currently any external component, integration testing are not necessary.
+
+Acceptance Testing
+    - Currently the user workflow could cover three options, "Withdraw", "Fund Transfer", "Exit". We should create an acceptance testing to verify the Withdraw workflow where the user withdraws money from the bank account and it's deducted from the account balance,
+      another to verify the Fund Transfer workflow where the user will move money from one account to another where we should verify the money it's deducted from the account of origin and added to the destination account,
+      and lastly to verify Exit workflow where the user decides to exit without performing any operations.
+
+End to End
+    - Since this application currently is a CLI application, e2e tests should cover the interactions the user can perform with the console, it should cover:
+        - Entering account number information
+        - Entering pin information
+        - Verifying correct account number and balance is presented
+        - Option selection takes to you to the proper selected option
+        - Actions that can be performed in the option are correctly performed (since this is not currently implemented, it is difficult to specify exactly what this steps could be)
